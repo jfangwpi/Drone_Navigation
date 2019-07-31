@@ -5,8 +5,11 @@
   <arg name="gui" value="true"/>
   <arg name="headless" value="false"/>
   <arg name="debug" value="false"/>
-  <arg name="world_name" value="$(find sjtu_drone)/worlds/garching_kitchen.world"/>
- 
+   <!-- start world -->
+
+
+  <arg name="world_name" value="$(find sjtu_drone)/worlds/mountain.world"/>
+  <!--<arg name="world_name" value="$(env TURTLEBOT_GAZEBO_WORLD_FILE)"/>-->
   <!-- start gzserver and load the map -->
   <node name="gazebo" pkg="sjtu_drone" type="start_gzserver" args="$(arg world_name)" respawn="false"/>
 
